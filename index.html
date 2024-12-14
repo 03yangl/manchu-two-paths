@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life in the Qing Dynasty: A Linear Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Life in the Qing Dynasty: Two Paths</h1>
+            <p>Experience history through the eyes of those who lived it</p>
+        </div>
+
+        <div id="character-select">
+            <h2>Choose Your Path:</h2>
+            <button class="choice-btn" onclick="startGame('puyi')">
+                Play as Puyi (1908-1967)<br>
+                <span class="reaction">Follow the last Emperor's journey from throne to citizenship</span>
+            </button>
+            <button class="choice-btn" onclick="startGame('manchu')">
+                Play as a Manchu Family (1911-1950)<br>
+                <span class="reaction">Navigate cultural change across generations</span>
+            </button>
+        </div>
+
+        <div id="game-content" class="hidden">
+            <div class="status-bar">
+                <div>Year: <span id="year">1908</span></div>
+                <div>Character: <span id="character-type">-</span></div>
+                <div>Age: <span id="age">2</span></div>
+            </div>
+
+            <div id="timeline-marker" class="timeline-marker"></div>
+            <img id="scene-image" class="scene-image" src="/api/placeholder/800/400" alt="Historical Scene">
+            <div id="story-text"></div>
+            <div id="consequence" class="consequence"></div>
+            <div id="choices"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
