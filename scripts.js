@@ -7,11 +7,11 @@ const scenes = {
     puyi: [
         {
             text: "1908: At age 2, you are taken from your family to become Emperor of China. The Forbidden City will be your entire world.",
-            image: "/forbidden city.jpg",
+            image: "/images/forbidden city.jpg",
             choices: [
                 {
                     text: "Cling to your wet nurse Wang Jing'er for comfort",
-                    consequence: "You develop a close bond with your nurse, finding warmth in an otherwise formal world. Court officials disapprove but allow it due to your young age.",
+                    consequence: "You develop a close bond with your nurse, finding warmth in an otherwise formal world. Court officials disapprove this.",
                     next: 1
                 },
                 {
@@ -23,11 +23,11 @@ const scenes = {
         },
         {
             text: "1912: The Revolution succeeds. Though you've abdicated, you remain in the Forbidden City as a nominal emperor.",
-            image: "/childpuyi.jpeg",
+            image: "/images/childpuyi.jpeg",
             choices: [
                 {
                     text: "Find ways to exert power over your servants",
-                    consequence: "You develop a harsh temperament, taking out your frustrations on household staff. Your actions provide an illusion of power.",
+                    consequence: "You develop a harsh temperament, taking out your frustrations on household staff. Your actions provide an illusion of power, but you don't have more power than that and you are uneducated.",
                     next: 2
                 },
                 {
@@ -39,7 +39,7 @@ const scenes = {
         },
         {
             text: "1919: Reginald Johnston becomes your English tutor, offering glimpses of the outside world.",
-            image: "/api/placeholder/800/400",
+            image: "/images/reginald.jpg",
             choices: [
                 {
                     text: "Embrace Western learning enthusiastically",
@@ -55,7 +55,7 @@ const scenes = {
         },
         {
             text: "1922: Your marriage to Wanrong is arranged. She is beautiful and educated.",
-            image: "/api/placeholder/800/400",
+            image: "/images/wanrong.jpeg",
             choices: [
                 {
                     text: "Treat her as an equal partner",
@@ -71,7 +71,7 @@ const scenes = {
         },
         {
             text: "1924: Feng Yuxiang's forces expel you from the Forbidden City. You must leave your ancestral home.",
-            image: "/api/placeholder/800/400",
+            image: "/images/tianjin.png",
             choices: [
                 {
                     text: "Move to the Japanese concession in Tianjin",
@@ -80,14 +80,14 @@ const scenes = {
                 },
                 {
                     text: "Seek refuge with Chinese warlords",
-                    consequence: "You maintain connections with Chinese power brokers, though your lifestyle becomes more modest.",
+                    consequence: "Unfortunately you are manipulated by the Japanese people, and this is not really possible at the time.",
                     next: 5
                 }
             ]
         },
         {
             text: "1931: Japanese officials offer to make you Emperor of Manchukuo.",
-            image: "/api/placeholder/800/400",
+            image: "/images/manchukuo.jpg",
             choices: [
                 {
                     text: "Accept with hopes of real authority",
@@ -103,7 +103,7 @@ const scenes = {
         },
         {
             text: "1945: Soviet forces have captured you. You face interrogation about your role in Manchukuo.",
-            image: "/api/placeholder/800/400",
+            image: "/images/soviet.jpg",
             choices: [
                 {
                     text: "Cooperate fully and admit your mistakes",
@@ -112,14 +112,14 @@ const scenes = {
                 },
                 {
                     text: "Maintain that you were forced by the Japanese",
-                    consequence: "Your defensive stance leads to harsher treatment, though you maintain your sense of dignity.",
+                    consequence: "Your defensive stance leads to harsher treatment, though you maintain your sense of \"dignity,\" or have you really maintained it?",
                     next: 7
                 }
             ]
         },
         {
             text: "1950: The Chinese Communist authorities begin your re-education in Fushun Prison.",
-            image: "/api/placeholder/800/400",
+            image: "/images/fushun.jpg",
             choices: [
                 {
                     text: "Embrace re-education with genuine interest",
@@ -135,7 +135,7 @@ const scenes = {
         },
         {
             text: "1959: Released from prison, you begin work as a gardener in the Beijing Botanical Gardens.",
-            image: "/api/placeholder/800/400",
+            image: "/images/gardener.jpg",
             choices: [
                 {
                     text: "Find joy in this simple life",
@@ -151,7 +151,7 @@ const scenes = {
         },
         {
             text: "1962: You're asked to write your autobiography, 'From Emperor to Citizen.'",
-            image: "/api/placeholder/800/400",
+            image: "/images/autobiography.jpg",
             choices: [
                 {
                     text: "Write with complete honesty about your transformation",
@@ -160,14 +160,14 @@ const scenes = {
                 },
                 {
                     text: "Write carefully, balancing truth with political necessity",
-                    consequence: "Your measured account satisfies authorities while preserving some dignity, though it feels incomplete to you.",
+                    consequence: "Your measured account satisfies authorities while preserving some dignity, though it feels incomplete to you, people question your honesty.",
                     next: 10
                 }
             ]
         },
         {
             text: "1964: You meet Li Shuxian, a hospital nurse.",
-            image: "/api/placeholder/800/400",
+            image: "/images/newnurse.jpg",
             choices: [
                 {
                     text: "Court her openly, despite your past",
@@ -183,7 +183,7 @@ const scenes = {
         },
         {
             text: "1967: The Cultural Revolution begins. Red Guards question your reformation.",
-            image: "/api/placeholder/800/400",
+            image: "/images/redguards.jpg",
             choices: [
                 {
                     text: "Participate in self-criticism sessions willingly",
@@ -200,197 +200,164 @@ const scenes = {
     ],
     manchu: [
         {
-            text: "1911: Your once-privileged Banner family faces an uncertain future as revolution spreads. The government stipend may soon end.",
-            image: "/api/placeholder/800/400",
+            text: "1911: The Banner system has collapsed. Your family receives notice that all stipends will end immediately.",
+            image: "/images/banner.jpg",
             choices: [
                 {
-                    text: "Invest family savings in modern education",
-                    consequence: "Your children gain new opportunities but begin losing touch with their Manchu heritage. They learn alongside Han students.",
+                    text: "Sell things from home to survive",
+                    consequence: "You maintain a basic living but lose precious connections to your heritage.",
                     next: 1
                 },
                 {
-                    text: "Maintain traditional Manchu lifestyle",
-                    consequence: "You preserve customs but face increasing economic hardship as Banner privileges disappear.",
-                    next: 2
+                    text: "Try to maintain status by borrowing money",
+                    consequence: "The debts begin to mount dangerously, threatening your family's future.",
+                    next: 1
                 }
             ]
         },
         {
-            text: "1915: Your father starts gambling at local establishments, hoping to maintain the family's standard of living.",
-            image: "/api/placeholder/800/400",
-            choices: [
-                {
-                    text: "Sell family heirlooms secretly",
-                    consequence: "You lose precious artifacts but manage to pay off initial debts. Your mother cries seeing empty display cases.",
-                    next: 3
-                },
-                {
-                    text: "Move to a smaller house in a poorer district",
-                    consequence: "Your status falls but you keep your heritage items. The children face discrimination in the new neighborhood.",
-                    next: 4
-                }
-            ]
-        },
-        {
-            text: "1920: Dangerous creditors demand payment. Your father has disappeared. [CRITICAL CHOICE]",
-            image: "/api/placeholder/800/400",
+            text: "1912: Anti-Manchu sentiment turns violent. Officials suggest changing your family name. [CRITICAL CHOICE]",
+            image: "/images/fengcheng1.jpg",
             critical: true,
             choices: [
                 {
-                    text: "Flee to Harbin overnight",
-                    consequence: "You abandon your home but save your family's lives. A harsh new beginning awaits in the northern city.",
-                    next: 5
+                    text: "Change surname to a Han name Yang(杨)",
+                    consequence: "Your family survives but loses its ancestral name. Your father weeps as he burns the family genealogy.",
+                    next: 2
                 },
                 {
-                    text: "Stay and try to negotiate",
-                    consequence: "GAME OVER: The creditors show no mercy. Your family's tragedy becomes a cautionary tale.",
+                    text: "Refuse to abandon your Manchu name",
+                    consequence: "GAME OVER: Your family becomes a target. None survive the night of violence.",
                     gameOver: true
                 }
             ]
         },
         {
-            text: "1923: In Harbin, your children attend a mixed school. Your youngest hasn't spoken Manchu in months.",
-            image: "/api/placeholder/800/400",
+            text: "1915: Your father turns to gambling, hoping to restore the family's fortunes.",
+            image: "/images/fengcheng2.jpg",
             choices: [
                 {
-                    text: "Enforce Manchu language at home",
-                    consequence: "The children resent the restrictions but maintain basic language skills. Family tensions rise.",
+                    text: "Try to stop his gambling",
+                    consequence: "He resents your interference but the debts grow more slowly. Family tensions rise.",
+                    next: 3
+                },
+                {
+                    text: "Let him continue gambling",
+                    consequence: "The debts spiral out of control. Dangerous people begin visiting your home.",
+                    next: 3
+                }
+            ]
+        },
+        {
+            text: "1920: Violent creditors demand immediate payment. [CRITICAL CHOICE]",
+            image: "/images/fengcheng3.jpg",
+            critical: true,
+            choices: [
+                {
+                    text: "Flee from Fengcheng(凤城) overnight to Yanbian(延边)",
+                    consequence: "You escape with just a few possessions, beginning a new life in another region with your entire family.",
+                    next: 4
+                },
+                {
+                    text: "Try to negotiate with creditors",
+                    consequence: "GAME OVER: The creditors make an example of your family. The community finds your bodies the next morning.",
+                    gameOver: true
+                }
+            ]
+        },
+        {
+            text: "1925: In Yanbian, your family is the only Manchu household. Nobody speaks your language.",
+            image: "/images/fengcheng4.jpg",
+            choices: [
+                {
+                    text: "Stop using Manchu language entirely",
+                    consequence: "Communication with neighbors improves, but your children quickly forget their native tongue.",
+                    next: 5
+                },
+                {
+                    text: "Try maintaining Manchu at home",
+                    consequence: "Everyone barely remembers how to speak Manchu other than basic words such as mom and dad.",
+                    next: 5
+                }
+            ]
+        },
+        {
+            text: "1935: Japanese forces enter your village. They demand cooperation. [CRITICAL CHOICE]",
+            image: "/images/japaninmanchu.jpg",
+            critical: true,
+            choices: [
+                {
+                    text: "Hide in the forest",
+                    consequence: "You survive but witness your parents' death as the Japanese burn your home.",
                     next: 6
                 },
                 {
-                    text: "Allow natural assimilation",
-                    consequence: "Family communication becomes easier but your mother mourns the loss of heritage.",
+                    text: "Try to cooperate with Japanese",
+                    consequence: "GAME OVER: The Japanese make false promises. Your family dies in the flames anyway.",
+                    gameOver: true
+                }
+            ]
+        },
+        {
+            text: "1938: You meet another Manchu girl.",
+            image: "/images/greatgrandparents.jpg",
+            choices: [
+                {
+                    text: "Marry and try to preserve traditions together",
+                    consequence: "You find comfort in shared heritage, but you need to survive first.",
+                    next: 7
+                },
+                {
+                    text: "Focus on building a new life",
+                    consequence: "You marry but prioritize survival over cultural preservation.",
                     next: 7
                 }
             ]
         },
         {
-            text: "1926: A marriage proposal arrives for your daughter - from a wealthy Han merchant's son.",
-            image: "/api/placeholder/800/400",
+            text: "1949: The People's Republic is established. Local officials encourage integration.",
+            image: "/images/fengcheng5.jpg",
             choices: [
                 {
-                    text: "Accept the inter-ethnic marriage",
-                    consequence: "Your daughter gains financial security but tradition-minded relatives cut ties.",
+                    text: "Fully embrace the new society",
+                    consequence: "Your family gains acceptance but loses the last traces of Manchu identity.",
                     next: 8
                 },
                 {
-                    text: "Insist on finding a Manchu suitor",
-                    consequence: "You maintain cultural purity but limit your daughter's prospects in the changing society.",
+                    text: "Try to maintain some traditions",
+                    consequence: "Most traditions fade anyway since survival is the most important thing.",
+                    next: 8
+                }
+            ]
+        },
+        {
+            text: "1960: Your children have grown up in Yanbian. They want to marry local Han partners.",
+            image: "/images/grandpama.jpg",
+            choices: [
+                {
+                    text: "Support their choices",
+                    consequence: "Your grandchildren will grow up knowing more about Han customs than Manchu heritage.",
+                    next: 9
+                },
+                {
+                    text: "Express sadness about tradition",
+                    consequence: "Your children marry anyway. The generational divide grows wider.",
                     next: 9
                 }
             ]
         },
         {
-            text: "1931: Japanese forces establish Manchukuo. Officials offer benefits to cooperative Manchu families. [CRITICAL CHOICE]",
-            image: "/api/placeholder/800/400",
-            critical: true,
+            text: "1970: Your grandchildren are growing up in Yanbian, learning more Korean culture than Manchu culture.",
+            image: "/images/dad.jpg",
             choices: [
                 {
-                    text: "Quietly decline and move south",
-                    consequence: "You face poverty again but maintain independence. The family relocates to Tianjin.",
-                    next: 10
-                },
-                {
-                    text: "Accept Japanese patronage",
-                    consequence: "GAME OVER: Your family gains wealth but faces execution as collaborators in 1945.",
-                    gameOver: true
-                }
-            ]
-        },
-        {
-            text: "1935: In Tianjin, your children want to cut their queues and adopt modern hairstyles.",
-            image: "/api/placeholder/800/400",
-            choices: [
-                {
-                    text: "Allow modernization",
-                    consequence: "Your family blends in better but loses another visible link to Manchu identity.",
-                    next: 11
-                },
-                {
-                    text: "Keep traditional appearance",
-                    consequence: "You face increased harassment but maintain cultural pride. Your sons resent standing out.",
-                    next: 11
-                }
-            ]
-        },
-        {
-            text: "1938: War brings refugees to Tianjin. Your oldest son wants to join the resistance against Japan.",
-            image: "/api/placeholder/800/400",
-            choices: [
-                {
-                    text: "Support his patriotic choice",
-                    consequence: "He fights for China, bridging the Manchu-Han divide but risking his life.",
-                    next: 12
-                },
-                {
-                    text: "Convince him to focus on family",
-                    consequence: "He stays safe but carries guilt. The family faces suspicion from patriotic neighbors.",
-                    next: 12
-                }
-            ]
-        },
-        {
-            text: "1940: Your neighborhood faces bombing. An old Han family offers shelter in their compound. [CRITICAL CHOICE]",
-            image: "/api/placeholder/800/400",
-            critical: true,
-            choices: [
-                {
-                    text: "Accept help and integrate",
-                    consequence: "You survive the war years, forming lasting bonds across ethnic lines.",
-                    next: 13
-                },
-                {
-                    text: "Maintain proud isolation",
-                    consequence: "GAME OVER: The next bombing raid finds your family without shelter.",
-                    gameOver: true
-                }
-            ]
-        },
-        {
-            text: "1945: After Japan's defeat, communist forces gain strength. Your youngest wants to join the party.",
-            image: "/api/placeholder/800/400",
-            choices: [
-                {
-                    text: "Support political adaptation",
-                    consequence: "Your son's party membership later protects the family but requires rejecting the past.",
-                    next: 14
-                },
-                {
-                    text: "Discourage political involvement",
-                    consequence: "You maintain independence but face challenges as 'class enemies' in the new order.",
-                    next: 14
-                }
-            ]
-        },
-        {
-            text: "1947: Land reform begins. Officials question your family's Banner background. [CRITICAL CHOICE]",
-            image: "/api/placeholder/800/400",
-            critical: true,
-            choices: [
-                {
-                    text: "Fully embrace peasant status",
-                    consequence: "You survive by completely renouncing your past, working as manual laborers.",
-                    next: 15
-                },
-                {
-                    text: "Defend your heritage",
-                    consequence: "GAME OVER: The family is labeled as reactionary and faces persecution.",
-                    gameOver: true
-                }
-            ]
-        },
-        {
-            text: "1949: The People's Republic is established. Your grandchildren speak only Mandarin.",
-            image: "/api/placeholder/800/400",
-            choices: [
-                {
-                    text: "Record family history privately",
-                    consequence: "You preserve knowledge for the future while publicly conforming. The manuscripts are hidden away.",
+                    text: "Accept that Manchu heritage is lost",
+                    consequence: "Your family story becomes just a fading memory as your grandchildren embrace local traditions.",
                     final: true
                 },
                 {
-                    text: "Embrace the new era completely",
-                    consequence: "Your family fully integrates into modern China, but centuries of cultural heritage fade away.",
+                    text: "Write down family history",
+                    consequence: "Your memoirs are stored away, rarely read as the family fully integrates into Yanbian's community.",
                     final: true
                 }
             ]
